@@ -4,13 +4,13 @@
 
 <img src="https://via.placeholder.com/400x200" alt="Imagem de perfil" width="400"/>
 
-* 📍 **Localização:** Algum Lugar, Brasil
-* 🏫 **Instituição de Ensino:** Universidade para todos.
-* 👨‍💻 **Curso:** Análise e Desenvolvimento de Sistemas.
-* 🗓️ **Semestre Atual:** X semestre
-* 💼 **Experiência:** Nenhuma
-* 💡 **Conhecimentos:** HTML, CSS e JavaScript.
-* 🚴 **Hobbies:** Jogar FPS e andar de bicicleta
+* 📍 **Localização:** Cornélio Procópio, Paraná, Brasil
+* 🏫 **Instituição de Ensino:** Universidade Tecnológica Federeal do Paraná - UTFPR.
+* 👨‍💻 **Curso:** Engenharia de Software.
+* 🗓️ **Semestre Atual:** 6º semestre.
+* 💼 **Experiência:** Desenvolvedor front-end, 2 anos.
+* 💡 **Conhecimentos:** WordPress · TypeScript · JavaScript · HTML · CSS · PHP · MySQL · MariaDB · Bootstrap · Web Design Responsivo · SEO · UX/UI.
+* 🚴 **Hobbies:** Academia.
 
 ## Sprints
 
