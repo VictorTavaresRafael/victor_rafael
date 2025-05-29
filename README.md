@@ -2,7 +2,7 @@
 
 ## Sobre mim
 
-<img src="[https://via.placeholder.com/400x200](https://avatars.githubusercontent.com/u/197788185?v=4)" alt="Imagem de perfil" width="400"/>
+<img src="avatars.githubusercontent.com/u/197788185" alt="Imagem de perfil" width="400"/>
 
 * 📍 **Localização:** Cornélio Procópio, Paraná, Brasil
 * 🏫 **Instituição de Ensino:** Universidade Tecnológica Federeal do Paraná - UTFPR.
