@@ -14,7 +14,7 @@
 
 ## Sprints
 
-* [Sprint 1](#sprint-1)
+* <a src="sprint-1"> [Sprint 1]</a>
 * [Sprint 2](#)
 * [Sprint 3](#)
 * [Sprint 4](#)
