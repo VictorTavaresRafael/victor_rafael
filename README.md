@@ -2,7 +2,7 @@
 
 ## Sobre mim
 
-<img src="sprint-1/victor.jpg" alt="Imagem de perfil" width="400"/>
+<img src="victor.jpg" alt="Imagem de perfil" width="400"/>
 
 * 📍 **Localização:** Cornélio Procópio, Paraná, Brasil
 * 🏫 **Instituição de Ensino:** Universidade Tecnológica Federeal do Paraná - UTFPR.
