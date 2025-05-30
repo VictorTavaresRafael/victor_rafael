@@ -2,7 +2,7 @@
 
 ## Sobre mim
 
-<img src="avatars.githubusercontent.com/u/197788185" alt="Imagem de perfil" width="400"/>
+<img src="sprint-1/desafio-sprint/diagrama_er/Esquema Estrela — Modelo Dimensional.png" alt="Imagem de perfil" width="400"/>
 
 * 📍 **Localização:** Cornélio Procópio, Paraná, Brasil
 * 🏫 **Instituição de Ensino:** Universidade Tecnológica Federeal do Paraná - UTFPR.
@@ -14,11 +14,4 @@
 
 ## Sprints
 
-* [Sprint 1](#)
-* [Sprint 2](#)
-* [Sprint 3](#)
-* [Sprint 4](#)
-* [Sprint 5](#)
-* [Sprint 6](#)
-* [Sprint 7](#)
-* [Sprint 8](#)
+* [Sprint 1](sprint-1/desafio-sprint)
