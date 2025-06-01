@@ -47,7 +47,7 @@ Para fins analíticos, criamos um modelo dimensional com uma **tabela fato** (`F
 - `DimVendedor`
 - `DimTempo`
 
-📄 Script: [`modelo_dimensional.sql`](./modelo_dimensional.sql)
+📄 Script: [`modelo_dimensional.sql`](./diagramas/modelo_dimensional.sql)
 
 ---
 
