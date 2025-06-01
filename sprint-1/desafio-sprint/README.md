@@ -83,4 +83,6 @@ Durante o processo:
 ├── README.md
 └── diagramas/
    ├── diagrama-modelo-relacional-normalizado.png
-   └── diagrama-modelo-dimensional.png
+   ├── diagrama-modelo-dimensional.png
+   ├── codigo_diagrama_normalizado.puml
+   └── codigo_diagrama_dimensional.puml
