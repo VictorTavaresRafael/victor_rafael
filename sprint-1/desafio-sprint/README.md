@@ -65,8 +65,9 @@ Estão disponíveis:
 ## 🧪 Execução e Evidências
 
 Durante o processo:
-- Utilizamos o SQLite para inspecionar e entender os dados
+- Utilizamos o SQLite para inspecionar os dados originais e entender os relacionamentos
 - Criamos os scripts SQL com as estruturas normalizadas e dimensionais
+- Testamos todos os scripts em ambiente PostgreSQL via pgAdmin
 ---
 
 ## 📂 Organização do Repositório
