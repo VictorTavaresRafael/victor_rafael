@@ -77,5 +77,5 @@ Durante o processo:
 ├── modelo_dimensional.sql
 ├── README.md
 └── diagramas/
-    ├── diagrama_er.png
-    └── esquema_estrela.png
+    ├── diagrama-modelo-relacional-normalizado.png
+    └── diagrama-modelo-dimensional.png
