@@ -34,7 +34,7 @@ Tabelas criadas:
 - `Vendedor`
 - `Locacao`
 
-📄 Script: [`modelo_normalizado.sql`](./diagramas/modelo_normalizado.sql)
+📄 Script: [`Modelo Normalizado`](./modelo_normalizado.sql)
 
 ---
 
@@ -47,7 +47,7 @@ Para fins analíticos, criamos um modelo dimensional com uma **tabela fato** (`F
 - `DimVendedor`
 - `DimTempo`
 
-📄 Script: [`modelo_dimensional.sql`](./diagramas/modelo_dimensional.sql)
+📄 Script: [`Modelo Dimensional`](./modelo_dimensional.sql)
 
 ---
 
@@ -57,8 +57,8 @@ Para fins analíticos, criamos um modelo dimensional com uma **tabela fato** (`F
 - Diagrama Estrela do modelo dimensional
 
 Estão disponíveis:
-- [`diagrama_er.png`](#) 
-- [`esquema_estrela.png`](#)
+- [`Modelo Normalizado`](./diagramas/diagrama-modelo-relacional-normalizado.png) 
+- [`Modelo Dimensional`](./diagramas/diagrama-modelo-dimensional.png)
   
 ---
 
