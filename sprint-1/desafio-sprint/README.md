@@ -34,7 +34,7 @@ Tabelas criadas:
 - `Vendedor`
 - `Locacao`
 
-📄 Script: [`modelo_normalizado.sql`](./modelo_normalizado.sql)
+📄 Script: [`modelo_normalizado.sql`](./diagramas/modelo_normalizado.sql)
 
 ---
 
