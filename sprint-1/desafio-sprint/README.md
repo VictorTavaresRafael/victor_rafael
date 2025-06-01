@@ -34,7 +34,7 @@ Tabelas criadas:
 - `Vendedor`
 - `Locacao`
 
-📄 Script: [`modelo_normalizado.sql`](./modelo_normalizado.sql)
+📄 Script: [`modelo_normalizado.sql`](./diagramas/modelo_normalizado.sql)
 
 ---
 
@@ -47,13 +47,11 @@ Para fins analíticos, criamos um modelo dimensional com uma **tabela fato** (`F
 - `DimVendedor`
 - `DimTempo`
 
-📄 Script: [`modelo_dimensional.sql`](./modelo_dimensional.sql)
+📄 Script: [`modelo_dimensional.sql`](./diagramas/modelo_dimensional.sql)
 
 ---
 
 ### 4. Diagramas
-
-Utilizamos o padrão **PlantUML** para gerar os diagramas:
 
 - Diagrama ER do modelo relacional
 - Diagrama Estrela do modelo dimensional
@@ -61,10 +59,7 @@ Utilizamos o padrão **PlantUML** para gerar os diagramas:
 Estão disponíveis:
 - [`diagrama_er.png`](#) 
 - [`esquema_estrela.png`](#)
-
-Você pode gerar os diagramas usando:
-> https://www.plantuml.com/plantuml
-
+  
 ---
 
 ## 🧪 Execução e Evidências
@@ -72,8 +67,6 @@ Você pode gerar os diagramas usando:
 Durante o processo:
 - Utilizamos o SQLite para inspecionar e entender os dados
 - Criamos os scripts SQL com as estruturas normalizadas e dimensionais
-- Utilizamos PlantUML para modelagem visual
-
 ---
 
 ## 📂 Organização do Repositório
