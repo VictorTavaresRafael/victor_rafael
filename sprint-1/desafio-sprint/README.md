@@ -72,7 +72,6 @@ Durante o processo:
 ## 📂 Organização do Repositório
 
 ```bash
-📁 certificados
 
 📁 desafio-sprint
 ├── modelo_normalizado.sql
@@ -81,15 +80,3 @@ Durante o processo:
 └── diagramas/
    ├── diagrama-modelo-relacional-normalizado.png
    └── diagrama-modelo-dimensional.png
-
-📁 evidencias
-├── 01_tabelas_criadas_normalizado.png
-├── 02_tabelas_criadas_dimensional.png
-└── 03_visualizacao_dados.png
-
-📁 exercicios
-├── biblioteca/
-│   ├── 📁 concluidos
-│   └── 📁 falhas
-└── loja/
-    └── 📁 concluidos
