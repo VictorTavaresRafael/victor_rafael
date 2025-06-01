@@ -53,6 +53,8 @@ Para fins analíticos, criamos um modelo dimensional com uma **tabela fato** (`F
 
 ### 4. Diagramas
 
+Utilizamos o padrão **PlantUML** para gerar os diagramas:
+
 - Diagrama ER do modelo relacional
 - Diagrama Estrela do modelo dimensional
 
@@ -67,6 +69,7 @@ Estão disponíveis:
 Durante o processo:
 - Utilizamos o SQLite para inspecionar os dados originais e entender os relacionamentos
 - Criamos os scripts SQL com as estruturas normalizadas e dimensionais
+- Utilizamos [`PlantUML`](https://www.plantuml.com/plantuml) para modelagem visual
 - Testamos todos os scripts em ambiente PostgreSQL via pgAdmin
 ---
 
