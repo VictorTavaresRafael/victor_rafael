@@ -1,0 +1,46 @@
+@startuml
+
+entity CLIENTE {
+  +id_cliente : INTEGER
+  nome : TEXT
+  cpf : TEXT
+  telefone : TEXT
+  endereco : TEXT
+}
+
+entity CARRO {
+  +id_carro : INTEGER
+  modelo : TEXT
+  marca : TEXT
+  ano : INTEGER
+  cor : TEXT
+  placa : TEXT
+  preco : REAL
+}
+
+entity FUNCIONARIO {
+  +id_funcionario : INTEGER
+  nome : TEXT
+  cargo : TEXT
+  telefone : TEXT
+}
+
+entity VENDA {
+  +id_venda : INTEGER
+  id_cliente : INTEGER
+  id_funcionario : INTEGER
+  data_venda : DATE
+  valor_total : REAL
+}
+
+entity ITEM_VENDA {
+  +id_venda : INTEGER
+  +id_carro : INTEGER
+}
+
+CLIENTE ||--o{ VENDA : realiza
+FUNCIONARIO ||--o{ VENDA : efetua
+VENDA ||--o{ ITEM_VENDA : contem
+CARRO ||--o{ ITEM_VENDA : vendido
+
+@enduml
