@@ -57,8 +57,8 @@ Para fins analíticos, criamos um modelo dimensional com uma **tabela fato** (`F
 - Diagrama Estrela do modelo dimensional
 
 Estão disponíveis:
-- [`diagrama_er.png`](./diagramas/diagrama-modelo-relacional-normalizado.png) 
-- [`esquema_estrela.png`](./diagramas/diagrama-modelo-dimensional.png)
+- [`diagrama-modelo-relacional-normalizado.png`](./diagramas/diagrama-modelo-relacional-normalizado.png) 
+- [`diagrama-modelo-dimensional.png`](./diagramas/diagrama-modelo-dimensional.png)
   
 ---
 
