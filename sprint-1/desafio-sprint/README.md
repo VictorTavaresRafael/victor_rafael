@@ -77,12 +77,20 @@ Durante o processo:
 
 ```bash
 
-📁 desafio-sprint
+📂 desafio-sprint
 ├── modelo_normalizado.sql
 ├── modelo_dimensional.sql
 ├── README.md
-└── diagramas/
-   ├── diagrama-modelo-relacional-normalizado.png
-   ├── diagrama-modelo-dimensional.png
-   ├── codigo_diagrama_normalizado.puml
-   └── codigo_diagrama_dimensional.puml
+├── diagramas/
+│   ├── diagrama-modelo-relacional-normalizado.png
+│   ├── diagrama-modelo-dimensional.png
+│   ├── codigo_diagrama_normalizado.puml
+│   └── codigo_diagrama_dimensional.puml
+└── evidencias/
+    ├── 00_execucao_modelo_base.png
+    ├── 01_tabelas_criadas_normalizado.png
+    ├── 02_tabelas_criadas_dimensional.png
+    ├── 03_insercao_dados_teste.png
+    ├── 04_visualizacao_dados.png
+    ├── 05_criacao_diagrama_normalizado.png
+    └── 06_criacao_diagrama_dimensional.png
