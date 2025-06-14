@@ -14,4 +14,5 @@
 
 ## Sprints
 
-* [Sprint 1](sprint-1/desafio-sprint)
+* [Sprint 1](sprint-1/)
+* [Sprint 2](sprint-2/)
