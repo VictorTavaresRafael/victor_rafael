@@ -48,3 +48,18 @@ Todo o desenvolvimento, os resultados e as evidências do projeto estão documen
 ---
 
 ## 📂 Estrutura do Repositório da Sprint
+sprint-2/
+├── 📄 certificados/       # Certificados dos cursos da Semana 1
+├── 📂 desafio-sprint/     # Projeto principal da sprint
+│   ├── 📂 evidencias/
+│   ├── 📓 desafio.ipynb
+│   └── 📄 README.md
+├── 📂 exercicios/          # Exercícios práticos de Python e bibliotecas
+│   ├── 📂 secao-3/
+│   ├── 📂 secao-4/
+│   └── ...
+└── 📄 README.md            # Este arquivo de resumo da sprint
+
+## ✅ Conclusão
+
+Esta sprint foi uma jornada de grande aprendizado, permitindo-me ir da teoria à prática de forma estruturada. Sinto-me agora muito mais confiante para utilizar Python e suas bibliotecas para resolver problemas de dados do mundo real.
