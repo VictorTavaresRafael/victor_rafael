@@ -33,37 +33,50 @@ Para solidificar os conceitos, resolvi uma série de exercícios práticos, que 
 
 #### **Desafio da Sprint: Análise de Dados da Play Store**
 
-O ponto alto da sprint foi a realização de um projeto completo de análise de dados, utilizando um dataset real da Google Play Store. O desafio envolveu um ciclo de análise de ponta a ponta:
+O primeiro grande projeto da sprint foi uma análise completa de dados utilizando o dataset da Google Play Store e a biblioteca Pandas. O desafio envolveu um ciclo de ponta a ponta:
 
 1.  **Carregamento e Limpeza:** Tratamento de dados duplicados, corrompidos e normalização de colunas.
-2.  **Análise Exploratória:** Cálculo de indicadores chave para responder a perguntas específicas sobre o negócio.
-3.  **Visualização de Dados:** Criação de múltiplos gráficos para apresentar os insights de forma clara e profissional.
-
-Todo o desenvolvimento, os resultados e as evidências do projeto estão documentados e organizados na pasta do desafio.
+2.  **Análise Exploratória:** Cálculo de indicadores chave para responder a perguntas específicas.
+3.  **Visualização de Dados:** Criação de múltiplos gráficos para apresentar os insights de forma profissional.
 
 * ➡️ **[Acesse o projeto completo do desafio.](./desafio-sprint/)**
 * ➡️ **[Veja o notebook com toda a análise.](./desafio-sprint/desafio.ipynb)**
-* ➡️ **[Consulte a pasta de evidências com os gráficos e resultados.](./desafio-sprint/evidencias/)**
+
+#### **Desafio Adicional: ETL com Python Puro (Seção 6)**
+
+Para aprofundar os fundamentos de manipulação de arquivos e estruturas de dados, a Seção 6 apresentou um desafio de ETL (Extract, Transform, Load) utilizando **Python puro**, sem o auxílio de bibliotecas como Pandas ou CSV.
+
+O projeto consistiu em:
+1.  **Extrair** dados do arquivo `actors.csv` manualmente.
+2.  **Transformar** os dados em memória, realizando 5 análises distintas (ex: ator com mais filmes, contagem de frequência, ordenação por receita).
+3.  **Carregar** (Load) os resultados de cada análise em arquivos de texto separados.
+
+Este exercício foi crucial para entender o funcionamento interno das grandes bibliotecas de dados e reforçar a lógica de programação fundamental.
+
+* ➡️ **[Acesse o script da solução aqui.](./exercicios/secao-6/solucao_etl.py)**
+* ➡️ **[Consulte os arquivos de resultado gerados.](./exercicios/secao-6/resultados/)**
 
 ---
 
-## 📂 Estrutura do Repositório
+## 📂 Estrutura do Repositório da Sprint
 
 * `certificados/`
-    * *Armazena os certificados de conclusão dos cursos realizados na Semana 1.*
+    * *Armazena os certificados de conclusão dos cursos da Semana 1.*
 * `desafio-sprint/`
-    * *Contém o projeto principal da sprint, com o notebook da análise e todas as evidências geradas.*
-    * `evidencias/`
-    * `desafio.ipynb`
-    * `README.md`
+    * *Contém o projeto de Análise da Play Store, com o notebook e evidências.*
 * `exercicios/`
-    * *Pasta com os notebooks de exercícios práticos para fixação do conteúdo, divididos por seção.*
+    * *Pasta com os notebooks e scripts de exercícios práticos.*
     * `secao-3/`
     * `secao-4/`
+    * `secao-5/`
+    * `secao-6/`
+        * *Contém o desafio de ETL com Python puro.*
+        * `solucao_etl.py`
+        * `resultados/` (com os arquivos `etapa-X.txt`)
     * `...`
 * `README.md`
     * *Este arquivo, que resume toda a jornada e os aprendizados da sprint.*
 
 ## ✅ Conclusão
 
-Esta sprint foi uma jornada de grande aprendizado, permitindo-me ir da teoria à prática de forma estruturada. Sinto-me agora muito mais confiante para utilizar Python e suas bibliotecas para resolver problemas de dados do mundo real.
+Esta sprint foi uma jornada de grande aprendizado, permitindo-me ir da teoria à prática de forma estruturada. Sinto-me agora muito mais confiante para utilizar tanto as bibliotecas de alto nível quanto as funcionalidades nativas do Python para resolver problemas de dados do mundo real.
