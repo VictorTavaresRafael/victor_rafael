@@ -47,18 +47,22 @@ Todo o desenvolvimento, os resultados e as evidências do projeto estão documen
 
 ---
 
-## 📂 Estrutura do Repositório da Sprint
-sprint-2/
-├── 📄 certificados/       # Certificados dos cursos da Semana 1
-├── 📂 desafio-sprint/     # Projeto principal da sprint
-│   ├── 📂 evidencias/
-│   ├── 📓 desafio.ipynb
-│   └── 📄 README.md
-├── 📂 exercicios/          # Exercícios práticos de Python e bibliotecas
-│   ├── 📂 secao-3/
-│   ├── 📂 secao-4/
-│   └── ...
-└── 📄 README.md            # Este arquivo de resumo da sprint
+## 📂 Estrutura do Repositório
+
+* `certificados/`
+    * *Armazena os certificados de conclusão dos cursos realizados na Semana 1.*
+* `desafio-sprint/`
+    * *Contém o projeto principal da sprint, com o notebook da análise e todas as evidências geradas.*
+    * `evidencias/`
+    * `desafio.ipynb`
+    * `README.md`
+* `exercicios/`
+    * *Pasta com os notebooks de exercícios práticos para fixação do conteúdo, divididos por seção.*
+    * `secao-3/`
+    * `secao-4/`
+    * `...`
+* `README.md`
+    * *Este arquivo, que resume toda a jornada e os aprendizados da sprint.*
 
 ## ✅ Conclusão
 
