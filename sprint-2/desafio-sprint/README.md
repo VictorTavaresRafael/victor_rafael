@@ -93,7 +93,7 @@ Para executar este projeto em seu ambiente local, siga os passos abaixo:
     ```bash
     jupyter lab
     ```
-    Navegue até a pasta `desafio-sprint` e abra o arquivo `desafio.ipynb` para executar as células.
+    Navegue até a pasta `desafio-01-play-store` e abra o arquivo `desafio.ipynb` para executar as células.
 
 ## 🧠 Desafios e Aprendizados
 

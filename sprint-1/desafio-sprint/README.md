@@ -77,7 +77,7 @@ Durante o processo:
 
 ```bash
 
-📂 desafio-sprint
+📂 desafio-01-play-store
 ├── modelo_normalizado.sql
 ├── modelo_dimensional.sql
 ├── README.md
