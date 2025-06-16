@@ -17,13 +17,52 @@ O notebook (`desafio.ipynb`) documenta cada passo do processo, explicando a lóg
 
 O projeto respondeu a uma série de perguntas sobre o dataset, gerando os seguintes indicadores e visualizações:
 
-* **Top 5 Apps por Instalação:** Identificação dos aplicativos com maior número de instalações (Gráfico de Barras).
-* **Distribuição de Categorias:** Análise da participação de mercado das categorias de aplicativos (Gráfico de Pizza/Donut).
+* **Top 5 Apps por Instalação:** Identificação dos aplicativos com maior número de instalações.
+* **Distribuição de Categorias:** Análise da participação de mercado das categorias de aplicativos.
 * **Identificação do App Mais Caro:** Encontrado o aplicativo com o maior preço na loja.
 * **Contagem por Classificação Etária:** Quantificação de aplicativos com a classificação "Mature 17+".
 * **Top 10 Apps por Reviews:** Ranking dos aplicativos com maior número de avaliações.
-* **Distribuição das Notas (Ratings):** Análise da frequência das notas atribuídas aos apps (Histograma).
-* **Top Categorias por Média de Nota:** Ranking das categorias com as melhores avaliações médias (Gráfico de Barras Horizontais).
+* **Distribuição das Notas (Ratings):** Análise da frequência das notas atribuídas aos apps.
+* **Top Categorias por Média de Nota:** Ranking das categorias com as melhores avaliações médias.
+
+## 📈 Resultados Visuais
+
+Abaixo estão alguns dos principais resultados e visualizações gerados durante a análise.
+
+#### Top 5 Aplicativos por Número de Instalações
+*O gráfico de barras mostra os gigantes da Play Store, com aplicativos como Google Play Games e Facebook liderando em número de downloads.*
+
+![Top 5 Apps por Instalação](./evidencias/grafico_top_5_instalacoes.png)
+
+---
+
+#### Distribuição de Categorias de Aplicativos
+*O gráfico de pizza/donut revela que as categorias "Family" e "Game" dominam o ecossistema, seguidas por "Tools".*
+
+![Distribuição de Categorias](./evidencias/grafico_distribuicao_categorias.png)
+
+---
+
+#### Distribuição das Notas (Ratings) dos Apps
+*O histograma mostra uma forte concentração de aplicativos com notas altas, com um pico significativo acima de 4.0. A linha vermelha indica a média geral de nota na loja.*
+
+![Histograma de Ratings](./evidencias/grafico_histograma_ratings.png)
+
+---
+
+#### Top 10 Categorias por Média de Nota
+*O gráfico de barras horizontais destaca as categorias de nicho, como "Events" e "Education", que possuem as maiores médias de avaliação, indicando alta satisfação do usuário.*
+
+![Top Categorias por Rating](./evidencias/grafico_top_categorias_rating.png)
+
+---
+
+#### Evidência de Análise Textual: Top 10 Apps por Reviews
+*Além dos gráficos, a análise também extraiu dados textuais, como o ranking dos aplicativos com maior engajamento em forma de reviews.*
+
+![Top 10 Apps por Reviews](./evidencias/evidencia_top_10_reviews.png)
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -60,17 +99,15 @@ Para executar este projeto em seu ambiente local, siga os passos abaixo:
     ```bash
     jupyter lab
     ```
-    Navegue até o arquivo `desafio.ipynb` e execute as células.
+    Navegue até a pasta `desafio-sprint` e abra o arquivo `desafio.ipynb` para executar as células.
 
 ## 🧠 Desafios e Aprendizados
 
 A execução deste desafio proporcionou um aprendizado prático e profundo, principalmente ao superar os seguintes obstáculos:
 
-1.  **Limpeza e Normalização de Dados:** O principal desafio foi o tratamento de colunas que aparentavam ser numéricas (`Installs`, `Price`, `Reviews`), mas que estavam armazenadas como texto e continham caracteres especiais (`+`, `,`, `$`). Foi um ótimo exercício para aplicar métodos de transformação de dados e garantir a consistência para cálculos futuros.
-
-2.  **Tratamento de Dados Corrompidos:** Um `ValueError` inesperado nos levou a descobrir uma linha no dataset cujos dados estavam completamente deslocados. Este problema realçou a importância de não confiar cegamente nos dados e de ter estratégias para identificar e tratar anomalias e outliers que possam comprometer a análise.
-
-3.  **Gerenciamento de Estado no Jupyter:** Enfrentei um `NameError` persistente que, após investigação, foi causado por uma variável que não existia na memória (kernel) do notebook. Esse episódio foi fundamental para solidificar meu entendimento sobre como o Jupyter gerencia o estado da sessão e a necessidade de executar as células em uma ordem lógica, especialmente após reiniciar o ambiente.
+1.  **Limpeza e Normalização de Dados:** O principal desafio foi o tratamento de colunas que aparentavam ser numéricas (`Installs`, `Price`, `Reviews`), mas que estavam armazenadas como texto e continham caracteres especiais (`+`, `,`, `$`).
+2.  **Tratamento de Dados Corrompidos:** Um `ValueError` inesperado nos levou a descobrir uma linha no dataset cujos dados estavam completamente deslocados, reforçando a importância de investigar anomalias.
+3.  **Gerenciamento de Estado no Jupyter:** Enfrentei um `NameError` persistente que foi fundamental para solidificar meu entendimento sobre como o Jupyter gerencia a "memória" (kernel) e a necessidade de executar as células em uma ordem lógica.
 
 ---
 
