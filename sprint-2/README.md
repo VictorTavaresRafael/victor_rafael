@@ -53,7 +53,7 @@ O projeto consistiu em:
 
 Este exercício foi crucial para entender o funcionamento interno das grandes bibliotecas de dados e reforçar a lógica de programação fundamental.
 
-* ➡️ **[Acesse o script da solução aqui.](./desafio-02-etl/solucao_etl.py)**
+* ➡️ **[Acesse o script da solução aqui.](./desafio-02-etl/solucao_etl.ipynb)**
 * ➡️ **[Consulte os arquivos de resultado gerados.](./desafio-02-etl/resultados/)**
 
 ---
