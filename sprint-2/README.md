@@ -39,8 +39,8 @@ O primeiro grande projeto da sprint foi uma análise completa de dados utilizand
 2.  **Análise Exploratória:** Cálculo de indicadores chave para responder a perguntas específicas.
 3.  **Visualização de Dados:** Criação de múltiplos gráficos para apresentar os insights de forma profissional.
 
-* ➡️ **[Acesse o projeto completo do desafio.](./desafio-sprint/)**
-* ➡️ **[Veja o notebook com toda a análise.](./desafio-sprint/desafio.ipynb)**
+* ➡️ **[Acesse o projeto completo do desafio.](./desafio-01-play-store/)**
+* ➡️ **[Veja o notebook com toda a análise.](./desafio-01-play-store/desafio.ipynb)**
 
 #### **Desafio Adicional: ETL com Python Puro (Seção 6)**
 
@@ -53,8 +53,8 @@ O projeto consistiu em:
 
 Este exercício foi crucial para entender o funcionamento interno das grandes bibliotecas de dados e reforçar a lógica de programação fundamental.
 
-* ➡️ **[Acesse o script da solução aqui.](./exercicios/secao-6/solucao_etl.py)**
-* ➡️ **[Consulte os arquivos de resultado gerados.](./exercicios/secao-6/resultados/)**
+* ➡️ **[Acesse o script da solução aqui.](./desafio-02-etl/solucao_etl.py)**
+* ➡️ **[Consulte os arquivos de resultado gerados.](./desafio-02-etl/resultados/)**
 
 ---
 
@@ -62,7 +62,7 @@ Este exercício foi crucial para entender o funcionamento interno das grandes bi
 
 * `certificados/`
     * *Armazena os certificados de conclusão dos cursos da Semana 1.*
-* `desafio-sprint/`
+* `desafio-01-play-store/`
     * *Contém o projeto de Análise da Play Store, com o notebook e evidências.*
 * `exercicios/`
     * *Pasta com os notebooks e scripts de exercícios práticos.*
