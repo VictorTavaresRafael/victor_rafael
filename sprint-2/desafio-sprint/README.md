@@ -55,12 +55,6 @@ Abaixo estão alguns dos principais resultados e visualizações gerados durante
 
 ![Top Categorias por Rating](./evidencias/grafico_top_categorias_rating.png)
 
----
-
-#### Evidência de Análise Textual: Top 10 Apps por Reviews
-*Além dos gráficos, a análise também extraiu dados textuais, como o ranking dos aplicativos com maior engajamento em forma de reviews.*
-
-![Top 10 Apps por Reviews](./evidencias/evidencia_top_10_reviews.png)
 
 ---
 
