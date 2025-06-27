@@ -1,0 +1,11 @@
+Q1:
+--- A artista que mais aparece e tem a maior média de faturamento é: Taylor Swift
+
+Q2:
+--- A turnê em um único ano com maior média de faturamento é: Renaissance World Tour por Beyoncé
+
+Q3:
+--- As 3 turnês com o show mais lucrativo são:
+- The Eras Tour † (Taylor Swift): $13,928,571.43 por show.
+- Renaissance World Tour (Beyoncé): $10,353,571.43 por show.
+- Reputation Stadium Tour (Taylor Swift): $7,600,846.21 por show.

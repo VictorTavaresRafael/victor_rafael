@@ -1,0 +1,46 @@
+version: '3.8'
+
+# Define os 'serviços' (containers) que nossa aplicação terá
+services:
+  # O primeiro serviço é o de ETL
+  etl:
+    # 'build' diz ao Compose para construir a imagem a partir do Dockerfile
+    # localizado na pasta './etl'
+    build: ./etl
+    # 'volumes' mapeia pastas do seu computador (host) para pastas dentro do container
+    # <pasta_no_host>:<pasta_no_container>
+    volumes:
+      # Mapeia a nossa pasta 'data' local para a pasta '/data' no container.
+      # Assim, o etl.py pode encontrar o CSV original.
+      - ./data:/data
+      # Mapeia o volume nomeado 'app_volume' para a pasta '/volume' no container.
+      # É aqui que o resultado (csv_limpo.csv) será salvo.
+      - app_volume:/volume
+
+  # O segundo serviço é o de análise (job)
+  job:
+    build: ./job
+    # 'depends_on' garante que o container 'job' só iniciará DEPOIS
+    # que o container 'etl' terminar sua execução com sucesso.
+    depends_on:
+      - etl
+    volumes:
+      # Mapeia o MESMO volume 'app_volume' para a pasta '/volume' no container.
+      # Assim, o job.py pode ler o 'csv_limpo.csv' que o etl criou.
+      # Os resultados do job (txt, png) também serão salvos aqui.
+      - app_volume:/volume
+
+# Define os volumes que serão usados pelos serviços.
+volumes:
+  # Aqui definimos nosso volume compartilhado.
+  app_volume:
+    # Usamos o driver 'local' para mapear para uma pasta no host.
+    driver: local
+    driver_opts:
+      type: 'none'
+      # 'o: bind' significa que estamos "ligando" o volume a uma pasta específica.
+      o: 'bind'
+      # 'device' é o caminho da pasta no seu computador que será usada.
+      # O '.' significa o diretório atual, então ele usará a pasta './volume'
+      # que criamos na raiz do projeto.
+      device: './volume'
