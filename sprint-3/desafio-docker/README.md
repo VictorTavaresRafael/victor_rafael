@@ -23,26 +23,21 @@ O desafio consiste em criar uma pipeline de dados automatizada que:
 O projeto foi organizado da seguinte forma para separar as responsabilidades:
 
 desafio-docker/
-|
-|-- data/
-|   |-- concert_tours_by_women.csv  # <-- Dado de entrada (bruto)
-|
-|-- etl/
-|   |-- etl.py                      # Script de extração, transformação e carga (ETL)
-|   |-- Dockerfile                  # Define como construir a imagem do ETL
-|
-|-- job/
-|   |-- job.py                      # Script de análise e geração das saídas
-|   |-- Dockerfile                  # Define como construir a imagem do Job
-|
-|-- volume/                         # Volume compartilhado com os resultados
-|   |-- csv_limpo.csv               # Saída do ETL, entrada para o Job
-|   |-- respostas.txt               # Respostas das perguntas 1, 2 e 3
-|   |-- Q4.png                      # Gráfico da pergunta 4
-|   |-- Q5.png                      # Gráfico da pergunta 5
-|
-|-- docker-compose.yml              # Orquestrador dos containers
-|-- README.md                       # Documentação do projeto
+├── data/
+│   └── concert_tours_by_women.csv     # Dado de entrada (bruto)
+├── etl/
+│   ├── etl.py                         # Script de extração, transformação e carga (ETL)
+│   └── Dockerfile                     # Define como construir a imagem do ETL
+├── job/
+│   ├── job.py                         # Script de análise e geração das saídas
+│   └── Dockerfile                     # Define como construir a imagem do Job
+├── volume/                            # Volume compartilhado com os resultados
+│   ├── csv_limpo.csv                  # Saída do ETL, entrada para o Job
+│   ├── respostas.txt                  # Respostas das perguntas 1, 2 e 3
+│   ├── Q4.png                         # Gráfico da pergunta 4
+│   └── Q5.png                         # Gráfico da pergunta 5
+├── docker-compose.yml                 # Orquestrador dos containers
+└── README.md                          # Documentação do projeto
 
 ## ✨ Funcionalidades e Entregáveis
 
