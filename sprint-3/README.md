@@ -29,6 +29,8 @@ Capacitação com foco técnico e comercial para parceiros AWS, visando não ape
 - **Comunicação Eficaz:** Como articular o valor de negócio da nuvem e lidar com objeções comuns de clientes.
 - **Modelo de Parceria:** Estratégias para vender e construir soluções em conjunto com a AWS.
 
+- [Certificado](https://www.credly.com/badges/fde28331-8179-46a1-8d94-37956e703496/linked_in?t=syooj0)
+
 ### 3. Guia Prático de REGEX com Python
 
 Estudo focado no uso de Expressões Regulares (REGEX), uma ferramenta poderosa para busca, validação e extração de padrões em textos.
