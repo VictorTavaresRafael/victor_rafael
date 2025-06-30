@@ -60,7 +60,6 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
     ```bash
     git clone [https://github.com/victor-rafael/desafio-docker.git](https://github.com/victor-rafael/desafio-docker.git)
     ```
-    *(Substitua pelo link do seu repositório)*
 
 2.  **Navegue até a pasta do projeto:**
     ```bash
