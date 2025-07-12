@@ -2,8 +2,8 @@
 
 import os
 import pandas as pd
-# import boto3 <- Não precisamos mais de boto3 para esta versão
-# from dotenv import load_dotenv <- E nem de dotenv
+# import boto3 <-- Não precisamos mais de boto3 para esta versão
+# from dotenv import load_dotenv <-- E nem de dotenv
 from io import StringIO
 import logging
 
