@@ -1,0 +1,14 @@
+# Ambiente Virtual
+venv/
+.venv/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+
+# Pasta de resultados (gerada pelo script)
+resultados/
+
+# Arquivos de configuração de editores
+.vscode/
+.idea/
