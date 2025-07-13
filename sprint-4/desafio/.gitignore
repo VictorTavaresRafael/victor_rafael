@@ -1,14 +1,18 @@
-# Ambiente Virtual
+# Ambiente Virtual do Python
 venv/
 .venv/
 
-# Arquivos de Cache do Python
+# Arquivos de cache e compilados do Python
 __pycache__/
 *.pyc
 
-# Pasta de resultados (gerada pelo script)
+# Pastas com dados gerados pelos notebooks
 resultados/
+dados_processados/
 
-# Arquivos de configuração de editores
+# Arquivos de checkpoint do Jupyter
+.ipynb_checkpoints/
+
+# Arquivos de configuração de editores de código
 .vscode/
 .idea/
