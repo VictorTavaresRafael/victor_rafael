@@ -7,7 +7,7 @@
 * 📍 **Localização:** Cornélio Procópio, Paraná, Brasil
 * 🏫 **Instituição de Ensino:** Universidade Tecnológica Federeal do Paraná - UTFPR.
 * 👨‍💻 **Curso:** Engenharia de Software.
-* 🗓️ **Semestre Atual:** 6º semestre.
+* 🗓️ **Semestre Atual:** 7º semestre.
 * 💼 **Experiência:** Desenvolvedor front-end, 2 anos.
 * 💡 **Conhecimentos:** WordPress · TypeScript · JavaScript · HTML · CSS · PHP · MySQL · MariaDB · Bootstrap · Web Design Responsivo · SEO · UX/UI.
 * 🚴 **Hobbies:** Academia.
