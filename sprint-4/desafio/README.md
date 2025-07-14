@@ -1,65 +1,49 @@
-# Desafio de Análise de Dados: Movimento Migratório no Brasil com Jupyter
+# Desafio de Análise de Dados e Integração com AWS S3
 
-Este projeto foi desenvolvido como parte de um desafio para um programa de bolsas. O objetivo é demonstrar um fluxo de trabalho de análise de dados, desde a limpeza até a geração de insights, utilizando Python, Pandas e Jupyter Notebooks.
+Este projeto foi desenvolvido como parte de um desafio para um programa de bolsas. O objetivo é demonstrar um fluxo de trabalho completo de análise de dados, desde a limpeza até o upload seguro dos resultados para a nuvem da AWS.
 
 ## 📝 Descrição do Projeto
 
-O projeto é dividido em duas etapas principais, representadas por dois Jupyter Notebooks:
+O projeto utiliza um conjunto de dados sobre movimentos migratórios no Brasil e é dividido em duas etapas principais, representadas por dois Jupyter Notebooks:
 
-1.  **`etl.ipynb` (Extração, Transformação e Limpeza):** Este notebook é responsável por carregar o conjunto de dados brutos (`STI_MOVIMENTO_2025_06.csv`), realizar a limpeza de colunas, tratar tipos de dados e, ao final, salvar uma versão limpa e processada do dataset.
-2.  **`analise.ipynb` (Análise Exploratória):** Utilizando os dados já limpos pela etapa de ETL, este notebook foca em responder às perguntas de negócio, realizando análises e agrupamentos. Os insights gerados são salvos em arquivos `.csv` na pasta `resultados/`.
+1.  **`etl.ipynb` (Extração, Transformação e Limpeza):** Responsável por carregar os dados brutos, realizar a limpeza e prepará-los para a análise, salvando uma versão processada.
+2.  **`analise.ipynb` (Análise e Upload para AWS):** Carrega os dados limpos, realiza três análises principais e, como passo final, faz o upload dos relatórios gerados para um bucket no Amazon S3.
 
-### Análises Realizadas:
-* Total de pessoas movimentadas por nacionalidade (Top 20).
-* Total de movimentos por Unidade Federativa (UF) de atendimento.
-* Total de movimentos por tipo de classificação (ex: Visitante, Permanente).
+### 🔐 Boas Práticas de Segurança
+A integração com a AWS segue as melhores práticas de segurança. As credenciais de acesso são gerenciadas fora do código, em um arquivo `.env` (ignorado pelo Git), e carregadas dinamicamente usando a biblioteca `python-dotenv`.
 
 ## 🛠️ Tecnologias Utilizadas
 
 * **Linguagem:** Python 3
-* **Bibliotecas:** `pandas`
+* **Bibliotecas:** `pandas`, `boto3`, `python-dotenv`
 * **Ambiente:** Jupyter Notebook
+* **Cloud:** Amazon Web Services (AWS) S3
 
 ## ⚙️ Como Executar o Projeto
 
-Siga os passos abaixo para executar o projeto em seu ambiente local.
+Siga os passos abaixo para executar o projeto.
 
 ### **1. Pré-requisitos**
-* Ter o Python e o Jupyter Notebook/Jupyter Lab instalados. Você pode instalar o Jupyter com `pip install notebook`.
-* Ter clonado este repositório.
+* Python e Jupyter Notebook instalados.
+* Uma conta na AWS com credenciais de acesso e um bucket S3 criado.
 
-### **2. Instale as Dependências**
-Abra o terminal na pasta do projeto, ative seu ambiente virtual (se estiver usando um) e instale a dependência:
-```bash
-pip install -r requirements.txt
-```
+### **2. Configure o Ambiente**
+* Clone este repositório.
+* Crie e ative um ambiente virtual.
+* Instale as dependências: `pip install -r requirements.txt`
 
-### **3. Execute os Notebooks na Ordem Correta**
-É crucial executar os notebooks na sequência correta, pois a análise depende dos dados limpos pelo ETL.
+### **3. Configure as Credenciais da AWS**
+* Crie um arquivo chamado `.env` na raiz do projeto.
+* Adicione suas credenciais e o nome do bucket neste formato:
+    ```ini
+    AWS_ACCESS_KEY_ID="SUA_CHAVE_DE_ACESSO"
+    AWS_SECRET_ACCESS_KEY="SUA_CHAVE_SECRETA"
+    AWS_S3_BUCKET="NOME_DO_SEU_BUCKET"
+    ```
 
-* **Passo 1: Execute `etl.ipynb`**
-    * Abra o notebook `etl.ipynb` no Jupyter.
-    * Clique em "Kernel" > "Restart & Run All" para executar todas as células.
-    * Isso irá gerar o arquivo `dados_processados/movimento_migratorio_limpo.csv`.
+### **4. Execute os Notebooks na Ordem Correta**
+1.  **Execute `etl.ipynb` primeiro:** Abra e execute todas as células para gerar os dados limpos.
+2.  **Execute `analise.ipynb` em seguida:** Abra e execute todas as células para realizar as análises e enviar os resultados para o S3.
 
-* **Passo 2: Execute `analise.ipynb`**
-    * Após a conclusão do primeiro notebook, abra `analise.ipynb`.
-    * Execute todas as suas células ("Kernel" > "Restart & Run All").
-    * Isso irá gerar os três relatórios de análise na pasta `resultados/`.
-
-## 📂 Estrutura do Projeto
-```
-desafio-migracao/
-├── dados/
-│   └── STI_MOVIMENTO_2025_06.csv
-├── dados_processados/
-│   └── movimento_migratorio_limpo.csv
-├── resultados/
-│   ├── analise_nacionalidade.csv
-│   ├── ...
-├── .gitignore
-├── analise.ipynb
-├── etl.ipynb
-├── README.md
-└── requirements.txt
-```
+### **5. Verifique os Resultados**
+* Acesse o seu bucket no console da AWS S3 para confirmar que os 3 arquivos de análise foram carregados com sucesso.
