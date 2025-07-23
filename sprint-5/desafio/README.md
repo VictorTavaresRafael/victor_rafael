@@ -44,14 +44,14 @@ O processo foi executado localmente através de um container Docker. O comando `
 
 O print abaixo mostra o terminal após a execução do comando `docker run`, confirmando que os dois arquivos, `series.csv` e `movies.csv`, foram carregados com sucesso.
 
-<img src="/sprint-5/desafio/evidencias/upload-concluido.png" alt="Imagem de perfil" width="250"/>
+<img src="/sprint-5/desafio/evidencias/upload-concluido.png" alt="Imagem de perfil"/>
 
 **Evidência 2: Arquivos na Camada Raw do S3**
 
 O segundo print mostra o resultado no console da AWS. Os arquivos foram persistidos no bucket S3, seguindo o padrão de nomenclatura e a estrutura de pastas particionadas por data, como exigido pelo desafio.
 
-<img src="/sprint-5/desafio/evidencias/bucket-filme.png" alt="Imagem de perfil" width="250"/>
+<img src="/sprint-5/desafio/evidencias/bucket-filme.png" alt="Imagem de perfil" />
 <br>
-<img src="/sprint-5/desafio/evidencias/bucket-serie.png" alt="Imagem de perfil" width="250"/>
+<img src="/sprint-5/desafio/evidencias/bucket-serie.png" alt="Imagem de perfil"/>
 
 ---
