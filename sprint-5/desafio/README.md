@@ -53,5 +53,54 @@ O segundo print mostra o resultado no console da AWS. Os arquivos foram persisti
 <img src="/sprint-5/desafio/evidencias/bucket-filme.png"/>
 <br>
 <img src="/sprint-5/desafio/evidencias/bucket-serie.png"/>
+<br>
 
+### Etapa 2: Ingestão de Dados da API (Streaming)
+
+A segunda etapa do projeto focou em enriquecer os dados existentes. O objetivo foi utilizar os IDs das obras (`imdb_id`) presentes nos arquivos CSV para consultar uma API externa (TMDB - The Movie Database), obter dados complementares (como orçamento, receita, popularidade) e salvar essas novas informações como arquivos JSON na camada Raw do Data Lake.
+
+#### **Tecnologias Utilizadas:**
+* **AWS Lambda:** Para a execução do código de forma serverless.
+* **AWS S3:** Como fonte dos dados originais e destino para os novos dados JSON.
+* **AWS IAM:** Para o gerenciamento de permissões de acesso da função Lambda.
+* **Python:** Com as bibliotecas `boto3` (para interagir com a AWS), `pandas` (para manipulação de dados) e `requests` (para as chamadas de API).
+* **Docker:** Utilizado de forma crucial para construir um pacote de dependências (Layer) compatível com o ambiente da Lambda.
+
+#### **Arquivos Desenvolvidos:**
+
+* `lambda_function.py`: O código central da função Lambda. Foi desenvolvido para ser robusto, incluindo:
+    * Leitura dinâmica do S3 para encontrar os arquivos CSV mais recentes, sem depender de datas fixas.
+    * Processamento de arquivos grandes em "chunks" para evitar estouro de memória.
+    * Chamadas à API do TMDB para enriquecimento dos dados.
+    * Tratamento de erros e escrita do resultado final em formato JSON de volta ao S3, em um caminho particionado por data.
+
+#### **Desafios Enfrentados e Soluções**
+
+Esta etapa apresentou desafios técnicos significativos, que são comuns em projetos de engenharia de dados no mundo real.
+
+* **Desafio 1: Incompatibilidade de Ambiente (Windows vs. Linux)**
+    * **Problema:** A função Lambda falhava ao tentar importar a biblioteca `pandas`, retornando o erro `AttributeError: module 'os' has no attribute 'add_dll_directory'`. Isso ocorreu porque as dependências, quando instaladas localmente no Windows, não são compatíveis com o ambiente Linux da AWS Lambda.
+    * **Solução:** A solução foi criar um pacote de dependências (Lambda Layer) em um ambiente Linux simulado. Para isso, utilizamos um **container Docker** com a imagem `python:3.9` para executar o `pip install`. Em uma segunda etapa, devido a um problema de montagem de volume, utilizamos o comando `docker cp` para copiar os pacotes já instalados de dentro do container para a máquina local, garantindo 100% de compatibilidade.
+
+* **Desafio 2: Estouro de Memória (`Runtime.OutOfMemory`)**
+    * **Problema:** Mesmo após corrigir o Layer, a função falhava por exceder a memória alocada (mesmo com 1 GB). Isso acontecia porque o arquivo `movies.csv` era muito grande para ser carregado na memória de uma só vez pelo `pandas`.
+    * **Solução:** O código foi refatorado para usar uma abordagem de processamento em _streaming_. Utilizando o parâmetro `chunksize` da função `pandas.read_csv`, o arquivo foi lido em pedaços de 100.000 linhas por vez. Isso permitiu extrair os IDs necessários mantendo o uso de memória baixo e controlado (reduzindo de >1GB para ~316MB).
+
+#### **Execução e Evidências:**
+
+A função Lambda foi finalmente executada com sucesso após a implementação das otimizações de código e da correção do Layer de dependências.
+
+**Evidência 3: Sucesso na Execução da Lambda Otimizada**
+
+O print abaixo mostra o log da execução bem-sucedida no AWS CloudWatch, onde a função processa os arquivos em _chunks_ e conclui a coleta.
+
+[COLE AQUI O PRINT DA EXECUÇÃO BEM-SUCEDIDA DA LAMBDA]
+
+**Evidência 4: Arquivo JSON Enriquecido na Camada Raw**
+
+Finalmente, o print a seguir mostra o resultado no S3: a criação da pasta `Raw/TMDB/` e o arquivo JSON contendo os dados coletados da API, salvo com sucesso no bucket.
+
+[COLE AQUI O PRINT DA PASTA TMDB E DO ARQUIVO JSON NO SEU BUCKET S3]
+
+---
 ---
