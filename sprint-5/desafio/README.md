@@ -94,13 +94,13 @@ A função Lambda foi finalmente executada com sucesso após a implementação d
 
 O print abaixo mostra o log da execução bem-sucedida no AWS CloudWatch, onde a função processa os arquivos em _chunks_ e conclui a coleta.
 
-[COLE AQUI O PRINT DA EXECUÇÃO BEM-SUCEDIDA DA LAMBDA]
+<img src="/sprint-5/desafio/evidencias/execucao-lambda.png"/>
 
 **Evidência 4: Arquivo JSON Enriquecido na Camada Raw**
 
 Finalmente, o print a seguir mostra o resultado no S3: a criação da pasta `Raw/TMDB/` e o arquivo JSON contendo os dados coletados da API, salvo com sucesso no bucket.
 
-[COLE AQUI O PRINT DA PASTA TMDB E DO ARQUIVO JSON NO SEU BUCKET S3]
+<img src="/sprint-5/desafio/evidencias/pasta-tmdb-json.png"/>
 
 ---
 ---
