@@ -102,5 +102,25 @@ Finalmente, o print a seguir mostra o resultado no S3: a criação da pasta `Raw
 
 <img src="/sprint-5/desafio/evidencias/pasta-tmdb-json.png"/>
 
----
+## 4. Conclusão
+
+Este desafio representou uma jornada completa e prática na construção das fundações de um Data Lake na nuvem AWS. Ao final desta etapa, o objetivo principal de criar uma **Camada Raw** funcional e populada com dados de múltiplas fontes foi alcançado com sucesso.
+
+### Principais Conquistas e Aprendizados:
+
+* **Arquitetura Híbrida de Ingestão:** Foi implementado um pipeline capaz de lidar tanto com a ingestão de dados em **batch**, a partir de arquivos CSV legados usando Docker, quanto com a coleta de dados de uma **API externa** em tempo real através de uma arquitetura serverless com AWS Lambda.
+
+* **Resolução de Desafios Técnicos Reais:** O projeto serviu como uma arena para solucionar problemas complexos e comuns no dia a dia de um engenheiro de dados:
+    * **Compatibilidade de Ambientes:** O desafio de empacotar dependências Python (Layers) para o ambiente Linux da Lambda, mesmo desenvolvendo em Windows, reforçou a importância do **Docker** como ferramenta essencial para garantir a portabilidade e consistência entre ambientes.
+    * **Otimização de Memória:** O confronto com erros de `OutOfMemory` ao processar arquivos grandes foi um aprendizado crucial, levando à implementação de técnicas de **processamento em streaming (chunks)**, uma habilidade indispensável para lidar com Big Data.
+
+* **Orquestração de Serviços AWS:** O projeto integrou com sucesso um conjunto de serviços essenciais da AWS (S3, Lambda, IAM), demonstrando a capacidade de construir soluções de dados robustas e escaláveis na nuvem.
+
+### Próximos Passos
+
+Com a Camada Raw estabelecida, o projeto está pronto para avançar para as próximas fases:
+
+1.  **Sprint 6 (Camada Trusted):** Utilizar o **AWS Glue** para executar jobs de ETL que irão ler os dados brutos, limpá-los, transformá-los e salvá-los em formato Parquet, criando uma fonte de dados confiável e otimizada.
+2.  **Sprint 7 (Camada Refined):** Aplicar uma modelagem dimensional sobre os dados da camada Trusted, preparando-os para análises de negócio.
+3.  **Sprint 8 (Camada de Consumo):** Conectar o **AWS QuickSight** à camada Refined para construir dashboards e responder às questões de negócio definidas no início do desafio.
 ---
