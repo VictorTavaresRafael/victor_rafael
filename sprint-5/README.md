@@ -12,13 +12,13 @@ Durante esta sprint, dediquei-me à realização de cursos que foram fundamentai
   Um estudo aprofundado sobre o Apache Spark, utilizando a linguagem Python (PySpark) para processamento de grandes volumes de dados.
 
 - **AWS Skill Builder - Fundamentals of Analytics on AWS – Part 1**  
-  [Link para o seu certificado]
+  <img src="/sprint-5/certificados/certificado-AWS-Fundamentals-of-Analytics.pdf">
 
 - **AWS Skill Builder - Introduction to Amazon Athena**  
-  [Link para o seu certificado]
+  <img src="/sprint-5/certificados/certificado-AWS-Introduction-to-Amazon-Athena.pdf">
 
 - **AWS Skill Builder - Serverless Analytics**  
-  [Link para o seu certificado]
+  <img src="/sprint-5/certificados/certificado-AWS-Serverless-Analytics.pdf">
 
 ---
 
@@ -59,8 +59,7 @@ import requests
 import pandas as pd
 from IPython.display import display
 
-# Substitua "SUA CHAVE" pela chave de API obtida no TMDB
-api_key = "SUA CHAVE"
+api_key = "a300099b723d88520c7fb1fac5817994"
 url = f"https://api.themoviedb.org/3/movie/top_rated?api_key={api_key}&language=pt-BR"
 
 response = requests.get(url)
@@ -129,4 +128,4 @@ for word, count in wordCounts.collect():
 
 Além das atividades listadas, um desafio prático foi concluído para consolidar todos os aprendizados. Os detalhes, o código-fonte e as conclusões deste desafio estão documentados em seu próprio repositório:
 
-[**Nome do Desafio da Sprint** - Link para o README dedicado]
+* [Desafio](sprint-5/desafio)
