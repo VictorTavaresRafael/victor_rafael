@@ -54,12 +54,12 @@ Durante a execução, alguns desafios técnicos surgiram, exigindo depuração e
 **Evidência 1: Execução do Glue Job com Sucesso**
 *O print abaixo mostra o histórico de execução na aba "Runs" do AWS Glue, confirmando que o Job `ETL-Raw-Para-Trusted-v2` foi concluído com o status "Succeeded".*
 
-(/sprint-6/evidencias/desafio/run-de-sucesso.png)
+<img src="/sprint-6/evidencias/desafio/run-de-sucesso.png"/>
 
 **Evidência 2: Estrutura da Camada Trusted no S3**
 *O print abaixo evidencia a criação da nova camada no S3. É possível ver a pasta `Trusted/` e, dentro dela, os dados em formato Parquet, particionados por gênero e tipo, conforme definido no script ETL.*
 
-[INSERIR AQUI O PRINT DO S3 MOSTRANDO A PASTA `Trusted/` COM AS PARTIÇÕES E ARQUIVOS PARQUET]
+<img src="/sprint-6/evidencias/desafio/cama-trusted-enriquecida.png"/>
 
 ## 6. Conclusão da Sprint
 A Sprint 6 foi concluída com sucesso. Os dados brutos foram processados, resultando em uma Camada Trusted limpa, padronizada, enriquecida e otimizada para performance. Este conjunto de dados agora serve como uma "fonte única da verdade" confiável, pronta para a etapa final de modelagem dimensional na Sprint 7.
