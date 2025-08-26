@@ -18,6 +18,7 @@ Para esta etapa, foi utilizada uma arquitetura serverless de processamento de da
     * **Formato de Saída:** **Parquet**, escolhido por sua alta performance em consultas analíticas, compressão eficiente e integração com o ecossistema Spark e AWS.
 
 ## 3. Processo de Execução
+
 O fluxo de trabalho para a construção da Camada Trusted foi o seguinte:
 
 1.  **Descoberta de Schema (Crawler):** Primeiramente, um Crawler do AWS Glue foi executado sobre a Camada Raw para descobrir e catalogar automaticamente os schemas dos dados CSV e JSON, criando as tabelas no Data Catalog.
@@ -33,7 +34,86 @@ O fluxo de trabalho para a construção da Camada Trusted foi o seguinte:
     * **Carga:** O DataFrame final e transformado foi salvo de volta no S3, no caminho da Camada Trusted, em formato Parquet e particionado pelas colunas `genero` e `tipo` para otimizar futuras consultas.
 
 3.  **Execução do Glue Job:** O script foi configurado e executado como um Job formal no AWS Glue, garantindo um processo automatizável e monitorável.
+código do Job ETL:
+```python
+import sys
+from awsglue.transforms import *
+from awsglue.utils import getResolvedOptions
+from pyspark.context import SparkContext
+from pyspark.sql.functions import col, when, regexp_replace, lit, input_file_name
+from awsglue.context import GlueContext
+from awsglue.job import Job
 
+# --- 1. INICIALIZAÇÃO ---
+sc = SparkContext.getOrCreate()
+glueContext = GlueContext(sc)
+spark = glueContext.spark_session
+job = Job(glueContext)
+args = getResolvedOptions(sys.argv, ['JOB_NAME'])
+job.init(args['JOB_NAME'], args)
+
+# --- 2. EXTRAÇÃO ---
+DATABASE_NAME = "meubancodedados" 
+CSV_TABLE_NAME = "local"
+JSON_TABLE_NAME = "tmdb"
+print(f"Iniciando leitura das tabelas do Data Catalog...")
+dyf_csv_raw = glueContext.create_dynamic_frame.from_catalog(database=DATABASE_NAME, table_name=CSV_TABLE_NAME)
+dyf_tmdb_raw = glueContext.create_dynamic_frame.from_catalog(database=DATABASE_NAME, table_name=JSON_TABLE_NAME)
+df_csv_raw = dyf_csv_raw.toDF()
+df_tmdb_raw = dyf_tmdb_raw.toDF()
+print("Leitura do Data Catalog concluída.")
+
+# --- 3. TRANSFORMAÇÃO ---
+
+print("Iniciando processo de transformação...")
+
+# Adiciona a coluna 'tipo' (Movie/Series) com base no caminho do arquivo de origem
+df_csv_com_tipo = df_csv_raw.withColumn("tipo", 
+    when(input_file_name().contains('Movies'), "Movie")
+    .when(input_file_name().contains('Series'), "Series")
+    .otherwise("Desconhecido")
+)
+
+# Limpa, padroniza, converte os tipos e seleciona as colunas de uma só vez.
+# Acessamos os sub-campos '.long' ou '.string' das STRUCTs e usamos .alias() para renomear.
+df_obras_clean = df_csv_com_tipo.select(
+    col("id"),
+    col("titulopincipal").alias("tituloPrincipal"),
+    col("anolancamento.long").cast("integer").alias("anoLancamento"),
+    col("genero"),
+    col("notamedia.string").cast("float").alias("notaMedia"),
+    col("numerovotos.long").cast("integer").alias("numeroVotos"),
+    col("tipo")
+)
+
+# Limpa e seleciona colunas do dataframe da API TMDB
+df_tmdb_clean = df_tmdb_raw.select(
+    col("imdb_id"),
+    col("budget"),
+    col("popularity"),
+    col("revenue"),
+    col("vote_average").alias("tmdb_nota_media"),
+    col("vote_count").alias("tmdb_numero_votos")
+)
+
+# Join para enriquecer os dados
+df_final_enriquecido = df_obras_clean.join(
+    df_tmdb_clean,
+    df_obras_clean.id == df_tmdb_clean.imdb_id,
+    "left"
+).drop("imdb_id")
+
+print("Transformação concluída. Amostra do dado final:")
+df_final_enriquecido.show(10)
+
+# --- 4. CARGA ---
+s3_bucket_path = "s3://desafio-sprint-5-victor-rafael"
+path_trusted_obras = f"{s3_bucket_path}/Trusted/obras_enriquecidas/"
+print(f"Salvando dados enriquecidos em formato Parquet em: {path_trusted_obras}")
+df_final_enriquecido.write.mode("overwrite").partitionBy("genero", "tipo").parquet(path_trusted_obras)
+print("✅ Processo de ETL para a camada Trusted concluído com sucesso!")
+job.commit()
+```
 ## 4. Desafios Enfrentados e Soluções
 Durante a execução, alguns desafios técnicos surgiram, exigindo depuração e ajustes no script:
 
