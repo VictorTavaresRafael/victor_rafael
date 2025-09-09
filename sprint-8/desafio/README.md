@@ -33,19 +33,19 @@ O resultado final é um dashboard completo e funcional que transforma os dados p
 **Evidência 1: Dashboard Analítico Final**
 *O print abaixo mostra a visão geral do dashboard construído no QuickSight. Ele inclui os KPIs principais, os filtros interativos e os gráficos que consolidam as respostas para as questões de negócio.*
 
-[INSERIR AQUI O PRINT COMPLETO DO SEU DASHBOARD FINAL NO QUICKSIGHT]
+<img src="/sprint-8/evidencias/desafio/dashbord-completo.png"/>
 
 **Evidência 2: Gráficos Respondendo às Questões de Negócio**
 *Os prints a seguir detalham cada visualização criada, mostrando como elas respondem às perguntas que guiaram o projeto.*
 
 * **Análise de Popularidade (Pergunta 1):**
-    [INSERIR AQUI O PRINT DO GRÁFICO DE DISPERSÃO (SCATTER PLOT)]
+    <img src="/sprint-8/evidencias/desafio/grafico--notas-por-tipo.png"/>
 
 * **Análise de Tendências (Pergunta 3):**
-    [INSERIR AQUI O PRINT DO GRÁFICO DE LINHA/BARRAS DO VOLUME DE PRODUÇÃO POR ANO]
+<img src="/sprint-8/evidencias/desafio/grafico-ano-lancamento.png"/>
 
 * **Análise Comparativa de Avaliações (Pergunta 4):**
-    [INSERIR AQUI O PRINT DO GRÁFICO DE BARRAS AGRUPADAS COMPARANDO AS NOTAS]
+<img src="/sprint-8/evidencias/desafio/grafico-notas-por-genero.png"/>
 
 ## 5. Conclusão da Sprint
 A Sprint 8 concluiu com sucesso o ciclo de vida dos dados no projeto. Todo o pipeline de engenharia, desde a ingestão de dados brutos até a modelagem na camada Refined, culminou na criação de um produto de dados tangível e de alto valor: um dashboard analítico. Esta etapa demonstrou a capacidade de consumir os dados processados e traduzi-los em inteligência de negócio, finalizando o desafio de ponta a ponta.
