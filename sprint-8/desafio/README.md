@@ -26,3 +26,26 @@ O fluxo de trabalho para a construção do dashboard foi o seguinte:
 3.  **Criar o Dataset:** Dentro do QuickSight, um novo dataset foi criado utilizando o **Athena** como fonte. As tabelas `dim_obras` e `fato_metricas_obras` foram selecionadas e unidas (join) através da chave substituta (`obra_sk`), recriando o nosso modelo estrela dentro do ambiente de análise.
 
 4.  **Construir a Análise:** Com o dataset pronto, os visuais foram construídos na tela de "Analysis", arrastando e soltando os campos para criar gráficos que respondessem diretamente a cada uma das questões de negócio. Foram adicionados filtros interativos para permitir uma exploração mais aprofundada dos dados.
+
+## 4. Resultado Final e Evidências
+O resultado final é um dashboard completo e funcional que transforma os dados processados em insights claros e acionáveis.
+
+**Evidência 1: Dashboard Analítico Final**
+*O print abaixo mostra a visão geral do dashboard construído no QuickSight. Ele inclui os KPIs principais, os filtros interativos e os gráficos que consolidam as respostas para as questões de negócio.*
+
+[INSERIR AQUI O PRINT COMPLETO DO SEU DASHBOARD FINAL NO QUICKSIGHT]
+
+**Evidência 2: Gráficos Respondendo às Questões de Negócio**
+*Os prints a seguir detalham cada visualização criada, mostrando como elas respondem às perguntas que guiaram o projeto.*
+
+* **Análise de Popularidade (Pergunta 1):**
+    [INSERIR AQUI O PRINT DO GRÁFICO DE DISPERSÃO (SCATTER PLOT)]
+
+* **Análise de Tendências (Pergunta 3):**
+    [INSERIR AQUI O PRINT DO GRÁFICO DE LINHA/BARRAS DO VOLUME DE PRODUÇÃO POR ANO]
+
+* **Análise Comparativa de Avaliações (Pergunta 4):**
+    [INSERIR AQUI O PRINT DO GRÁFICO DE BARRAS AGRUPADAS COMPARANDO AS NOTAS]
+
+## 5. Conclusão da Sprint
+A Sprint 8 concluiu com sucesso o ciclo de vida dos dados no projeto. Todo o pipeline de engenharia, desde a ingestão de dados brutos até a modelagem na camada Refined, culminou na criação de um produto de dados tangível e de alto valor: um dashboard analítico. Esta etapa demonstrou a capacidade de consumir os dados processados e traduzi-los em inteligência de negócio, finalizando o desafio de ponta a ponta.
